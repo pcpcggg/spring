@@ -10,12 +10,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import kr.or.ddit.file.model.FileVo;
+import kr.or.ddit.test.ServiceDaoTestConfig;
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations= {"classpath:kr/or/ddit/config/spring/root-context.xml"})
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(locations= {"classpath:kr/or/ddit/config/spring/root-context.xml"})
 
-public class FileServiceTest {
+public class FileServiceTest extends ServiceDaoTestConfig {
 
 	@Resource(name="fileService")
 	private FileServiceInf fileService;

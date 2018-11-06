@@ -16,7 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import kr.or.ddit.user.UserVo;
+import kr.or.ddit.user.util.model.UserVo;
 
 /*
  * servlet

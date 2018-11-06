@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-	index.jsp
-</body>
+<script type="text/javascript">
+	document.location="/user/loginView";
+</script>
 </html>

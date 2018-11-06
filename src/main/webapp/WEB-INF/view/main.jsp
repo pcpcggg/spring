@@ -1,4 +1,4 @@
-<%@page import="kr.or.ddit.user.UserVo"%>
+<%@page import="kr.or.ddit.user.util.model.UserVo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
