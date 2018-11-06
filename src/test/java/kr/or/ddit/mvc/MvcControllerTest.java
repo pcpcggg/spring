@@ -24,9 +24,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.or.ddit.file.util.FileUtil;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations= {"classpath:kr/or/ddit/config/spring/servlet-context.xml"})
+@ContextConfiguration(locations= {"classpath:kr/or/ddit/config/spring/servlet-context.xml",
+"classpath:kr/or/ddit/config/spring/root-context.xml"})
 @WebAppConfiguration  //spring ioc 컨테이너 구성을  web 환경에 맞게 구성
 public class MvcControllerTest {
 	
@@ -56,7 +59,40 @@ public class MvcControllerTest {
 		
 		/***Then***/
 		assertEquals("mvc/view", viewName);
-		assertEquals(3, rangers.size());
+		assertEquals(4, rangers.size());
 	
 	}
+	
+	@Test
+	public void fileuploadViewTest() throws Exception {
+		/***Given***/
+		MvcResult mvcResult = mockMvc.perform(get("/mvc/fileupload")).andReturn();
+		/***When***/
+		ModelAndView mav = mvcResult.getModelAndView();
+
+		/***Then***/
+		assertEquals("mvc/fileuploadView", mav.getViewName());
+	}
+	
+	// 테스트 코드를 운영코드보다 먼저 작성하는 방법
+	// Test Driven Development
+	@Test
+	public void fileExtension() {
+		/***Given***/
+		String fileName = "park.jpg";
+		String fileName2 = "park";
+		/***When***/
+		FileUtil fileUtil = new FileUtil();
+	
+		String fileExt = fileUtil.getFileExt(fileName);
+		String fileExt2 = fileUtil.getFileExt(fileName2);
+		
+		/***Then***/
+		assertEquals(".jpg", fileExt);
+		assertEquals("", fileExt2);
+	}
+
+	
+
+	
 }

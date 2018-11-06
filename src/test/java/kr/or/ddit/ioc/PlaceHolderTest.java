@@ -33,8 +33,8 @@ public class PlaceHolderTest {
 		/***When***/
 
 		/***Then***/
-		assertEquals("bms", placeHolder.getUser());
-		assertEquals("java", placeHolder.getPassword());
+		assertEquals("chan", placeHolder.getUser());
+		assertEquals("1234", placeHolder.getPassword());
 		assertEquals("oracle.jdbc.driver.OracleDriver", placeHolder.getDriver());
 		assertEquals("jdbc:oracle:thin:@localhost:1521:xe", placeHolder.getUrl());
 	}
