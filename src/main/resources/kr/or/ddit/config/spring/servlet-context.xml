@@ -12,6 +12,10 @@
 	<!-- 스프링에서 처리 불가능한 리소를 was의 default servlet으로 전달 -->
 	<mvc:default-servlet-handler/>
 	
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		
+	</bean>
+	
 	<context:annotation-config/>
 	<context:component-scan base-package="kr.or.ddit" use-default-filters="false">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>

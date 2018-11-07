@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.stereotype.Repository;
 
 import kr.or.ddit.config.db.SqlFactoryBuilder;
 import kr.or.ddit.user.util.model.UserVo;
 import kr.or.ddit.user.util.model.PageVo;
- 
+
+@Repository("userDao")
 public class UserDao implements UserDaoInf {
 	
 	

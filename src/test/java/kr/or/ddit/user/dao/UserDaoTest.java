@@ -1,6 +1,6 @@
 package kr.or.ddit.user.dao;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -8,20 +8,14 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import kr.or.ddit.hello.HelloControllerTest;
-import kr.or.ddit.test.ServiceDaoTestConfig;
-import kr.or.ddit.user.dao.UserDao;
-import kr.or.ddit.user.dao.UserDaoInf;
-import kr.or.ddit.user.util.model.UserVo;
-
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import kr.or.ddit.test.ServiceDaoTestConfig;
+import kr.or.ddit.user.util.model.UserVo;
 
 public class UserDaoTest extends ServiceDaoTestConfig {
 	
-	private Logger logger = LoggerFactory.getLogger(HelloControllerTest.class);
 	
 	@Resource(name="userDao")
 	private UserDaoInf ud;
@@ -38,7 +32,7 @@ public class UserDaoTest extends ServiceDaoTestConfig {
 			System.out.println(uv.toString());
 		}
 		
-		assertEquals(105, userVoList.size());
+		assertEquals(112, userVoList.size());
 	}
 	
 	/**
@@ -101,7 +95,7 @@ public class UserDaoTest extends ServiceDaoTestConfig {
 		int totalCnt = ud.getUserCnt();
 
 		/***Then***/
-		assertEquals(105,totalCnt);
+		assertEquals(112,totalCnt);
 
 	}
 	

@@ -17,7 +17,7 @@
 	
 	
 </style>
-<%@include file="/common/basicLib.jsp" %>
+<%@include file="/WEB-INF/view/common/basicLib.jsp" %>
 
 <script type="text/javascript">
 
