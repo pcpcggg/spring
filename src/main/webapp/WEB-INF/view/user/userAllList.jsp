@@ -3,11 +3,12 @@
 <%@page import="kr.or.ddit.user.util.model.UserVo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<%@include file="/WEB-INF/view/common/header.jsp"%>
-<%@include file="/WEB-INF/view/common/left.jsp"%>
- 
-			<div class="row">
+
+
+<div class="row">
 	<div class="col-sm-8 blog-main">
 		<h2 class="sub-header">사용자</h2>
 		<div class="table-responsive">
@@ -36,10 +37,3 @@
 	
 	</div>
 </div>
-			
-		</div>
-	</div>
-	<!-- /.blog-main -->
-	</div>
-</body>
-</html>

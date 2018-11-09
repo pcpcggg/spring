@@ -2,15 +2,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@include file="/WEB-INF/view/common/header.jsp"%>
-<%@include file="/WEB-INF/view/common/left.jsp"%>
-
-
-
 <div class="blog-header">
 	<h1 class="blog-title">Main</h1>
 	<p class="lead blog-description">Jsp / Spring.</p>
 </div>
+
 
 <div class="row">
 
@@ -36,10 +32,4 @@
 			</ul>
 		</div>
 	</div>
-	<!-- /.blog-main -->
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+

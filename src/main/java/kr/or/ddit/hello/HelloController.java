@@ -142,6 +142,13 @@ public class HelloController {
 		
 	}
 	
+	
+	@RequestMapping("/exception")
+	public String view() {
+		
+		throw new ArithmeticException();
+	}
+	
 }
 
 

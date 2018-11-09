@@ -4,8 +4,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@include file="/WEB-INF/view/common/header.jsp"%>
-<%@include file="/WEB-INF/view/common/left.jsp"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <%@ page import="java.util.*"%>
 <%@ page import="java.text.SimpleDateFormat"%>
@@ -51,6 +51,7 @@
 					
 				</form>
 				
+				<%-- 
 				<form method="get" action="/userUpdate">
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
@@ -59,6 +60,7 @@
 						</div>
 					</div>
 				</form>
+				--%>
 	</div>
 </div>
 			

@@ -1,5 +1,6 @@
 package kr.or.ddit.user.util.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.http.HttpSessionBindingEvent;
@@ -103,6 +104,12 @@ public class UserVo implements HttpSessionBindingListener{
 	public Date getBirth() {
 		return birth;
 	}
+	
+	public String getFormattedBirth() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		return sdf.format(birth);
+	}
+	
 	public void setBirth(Date birth) {
 		this.birth = birth;
 	}

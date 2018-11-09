@@ -68,7 +68,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/userPageList")
-	public String userPageList(Model model, PageVo pageVo) {
+	public String userPageList(/*Model model, PageVo pageVo*/) {
 		
 		//spring 컨테이너로 부터 bean을 주입받기 때문에 new 연산자를 통해서 생성할 필요 없음
 		
@@ -90,12 +90,39 @@ public class UserController {
 //		request.setAttribute("pageList", pageList);
 //		request.setAttribute("pageCnt", pageCnt);
 		
-		Map<String, Object> resulMap = userService.selectUserPageList(pageVo);
-		model.addAllAttributes(resulMap);
+		// Map<String, Object> resulMap = userService.selectUserPageList(pageVo);
+		// model.addAllAttributes(resulMap);
 		
 		
 		
 		return "/user/userPageList";
+	}
+	
+	@RequestMapping("userPageListAjax")
+	public String userPageListAjax(Model model, PageVo pageVo) {
+		
+		Map<String, Object> resulMap = userService.selectUserPageList(pageVo);
+		model.addAllAttributes(resulMap);
+		
+		return "jsonView";
+	}
+	
+	@RequestMapping("userPageListAjaxHtml")
+	public String userPageListAjaxHtml(Model model, PageVo pageVo) {
+		
+		Map<String, Object> resulMap = userService.selectUserPageList(pageVo);
+		model.addAllAttributes(resulMap);
+		
+		return "user/pageListHtml";
+	}
+	
+	@RequestMapping("userPagenationAjaxHtml")
+	public String userPagenationAjaxHtml(Model model, PageVo pageVo) {
+		
+		Map<String, Object> resulMap = userService.selectUserPageList(pageVo);
+		model.addAllAttributes(resulMap);
+		
+		return "user/pagenationHtml";
 	}
 	
 	

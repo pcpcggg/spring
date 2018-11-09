@@ -4,8 +4,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@include file="/WEB-INF/view/common/header.jsp"%>
-<%@include file="/WEB-INF/view/common/left.jsp"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <style>
 	.ui-datepicker-trigger {float: left; width: 46px; padding-left: 10px;}

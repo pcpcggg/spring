@@ -30,7 +30,7 @@ public class ProdService implements ProdServiceInf{
 		
 		// 결과를 담는 map
 		Map<String, Object> resultMap = new HashMap<String, Object>();
-		resultMap.put("prodList", prodList);
+		resultMap.put("pageList", prodList);
 		resultMap.put("pageCnt", (int)Math.ceil( (double)totalProdCnt / page.getPageSize()));
 		
 		return resultMap;
